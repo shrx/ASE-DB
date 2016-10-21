@@ -36,8 +36,7 @@ def set_neighbor_list(self, neighbor_list):
 
 def get_parametrization(self):
     keys = self.info.keys()
-    data = self.info['data'].keys()
-    if 'data' in keys and 'parametrization' in data:
+    if 'data' in keys and 'parametrization' in self.info['data'].keys():
         return self.info['data']['parametrization']
     else:
         raise ValueError('Trying to get the parametrization before it is set!')
